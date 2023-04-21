@@ -1,38 +1,132 @@
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #fff; /* fond blanc */
-	color: #333; /* texte noir */
-	padding: 20px;
+/* Styles pour le corps de la page */
+body {
+    /* Utilisation de la police HammerBroIsTwinsane-Regular */
+    font-family: 'HammerBroIsTwinsane-Regular', sans-serif;
+  }
+  
+  /* Styles pour l'en-tête de la page */
+  header {
+    /* Utilisation d'un modèle de boîte flexible pour l'en-tête */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Fond blanc */
+    background-color: #fff;
+    /* Texte noir */
+    color: #333;
+    /* Espace intérieur de 20 pixels autour de l'en-tête */
+    padding: 20px;
+  }
+  
+  /* Styles pour la barre de navigation */
+  nav {
+    /* Flottement à droite de la barre de navigation */
+    float: right;
+    /* Marge de 10 pixels en haut de la barre de navigation */
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    /* Suppression des puces et des marges de la liste des liens de navigation */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    /* Affichage en ligne des liens de navigation */
+    display: inline-block;
+    /* Marge de 0 pixels sur les côtés des liens */
+    margin: 0 10px;
+  }
+  
+  nav a {
+    /* Couleur de texte noire pour les liens de navigation */
+    color: #333;
+    /* Texte sans décoration */
+    text-decoration: none;
+    /* Taille de police de 18 pixels et graisse de police en gras */
+    font-size: 18px;
+    font-weight: bold;
+    /* Espace intérieur de 10 pixels autour des liens de navigation */
+    padding: 10px;
+    /* Transition de 0.3 seconde sur tous les effets */
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    /* Fond noir pour les liens de navigation lorsqu'ils sont survolés */
+    background-color: #333;
+    /* Texte blanc pour les liens de navigation lorsqu'ils sont survolés */
+    color: #fff;
+  }
+  
+
+  /* Style pour la section entière du slider */
+.slider {
+  position: relative; /* Positionnement relatif */
+  height: 50vh; /* Hauteur égale à la moitié de la vue en hauteur (viewport height) */
+  overflow: hidden; /* Masquer le contenu qui dépasse de la section */
 }
 
-nav {
-	float: right;
-	margin-top: 10px;
+/* Style pour le conteneur des images du slider */
+.slider-container {
+  position: relative; /* Positionnement relatif */
+  height: 100%; /* Hauteur égale à 100% de la hauteur de la section parent */
+  width: 300%; /* Largeur égale à 300% de la largeur du conteneur parent */
+  display: flex; /* Afficher les éléments en tant que flexbox */
+  transition: left 0.5s ease-in-out; /* Transition pour l'animation de défilement */
+  left: 0; /* Position de départ pour le défilement */
 }
 
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+/* Style pour chaque image dans le slider */
+.slider-item {
+  position: relative; /* Positionnement relatif */
+  width: 33.33%; /* Largeur égale à 33,33% de la largeur du conteneur parent */
+  height: 100%; /* Hauteur égale à 100% de la hauteur de la section parent */
 }
 
-nav li {
-	display: inline-block;
-	margin: 0 10px;
+/* Style pour l'image active */
+.slider-item.active {
+  transform: scale(1); /* Agrandir l'image active */
+  z-index: 2; /* Empiler l'image active au-dessus des autres images */
 }
 
-nav a {
-	color: #333;
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: bold;
-	padding: 10px;
-	transition: all 0.3s ease;
+/* Style pour les images non actives */
+.slider-item:not(.active) {
+  transform: scale(0.8); /* Réduire la taille des images non actives */
+  opacity: 0.5; /* Réduire l'opacité des images non actives */
+  z-index: 1; /* Empiler les images non actives en-dessous de l'image active */
 }
 
-nav a:hover {
-	background-color: #333; /* fond noir */
-	color: #fff; /* texte blanc */
+/* Style pour les images dans le slider */
+.slider-item img {
+  width: 100%; /* Largeur de l'image à 100% de la largeur de son conteneur */
+  height: 100%; /* Hauteur de l'image à 100% de la hauteur de son conteneur */
+  object-fit: cover; /* Redimensionnement de l'image pour couvrir tout le conteneur */
 }
+
+/* Style pour la légende de l'image */
+.slider-caption {
+  position: absolute; /* Positionnement absolu */
+  bottom: 20px; /* Distance de 20px depuis le bas */
+  left: 20px; /* Distance de 20px depuis la gauche */
+  color: #fff; /* Couleur du texte en blanc */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée sur le texte */
+}
+
+/* Style pour le titre de la légende */
+.slider-caption h2 {
+  font-size: 2em; /* Taille de police de 2em */
+  margin: 0; /* Marge supprimée */
+  padding: 0; /* Rembourrage supprimé */
+}
+
+/* Style pour la description de la légende */
+.slider-caption p {
+  font-size: 1.2em; /* Taille de police de 1,2em */
+  margin: 0; /* Marge supprimée */
+  padding: 0; /* Rembourrage supprimé */
+}
+
+/* Style pour la navigation du slider
