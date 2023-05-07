@@ -1,132 +1,630 @@
+/* Mise en forme générale de la page index.html */
+
+body.index-page {
+  background-color: #f4f1ea;
+}
+
+
+
 /* Styles pour le corps de la page */
 body {
-    /* Utilisation de la police HammerBroIsTwinsane-Regular */
-    font-family: 'HammerBroIsTwinsane-Regular', sans-serif;
-  }
-  
-  /* Styles pour l'en-tête de la page */
-  header {
-    /* Utilisation d'un modèle de boîte flexible pour l'en-tête */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Fond blanc */
-    background-color: #fff;
-    /* Texte noir */
-    color: #333;
-    /* Espace intérieur de 20 pixels autour de l'en-tête */
-    padding: 20px;
-  }
-  
-  /* Styles pour la barre de navigation */
-  nav {
-    /* Flottement à droite de la barre de navigation */
-    float: right;
-    /* Marge de 10 pixels en haut de la barre de navigation */
-    margin-top: 10px;
-  }
-  
-  nav ul {
-    /* Suppression des puces et des marges de la liste des liens de navigation */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    /* Affichage en ligne des liens de navigation */
-    display: inline-block;
-    /* Marge de 0 pixels sur les côtés des liens */
-    margin: 0 10px;
-  }
-  
-  nav a {
-    /* Couleur de texte noire pour les liens de navigation */
-    color: #333;
-    /* Texte sans décoration */
-    text-decoration: none;
-    /* Taille de police de 18 pixels et graisse de police en gras */
-    font-size: 18px;
-    font-weight: bold;
-    /* Espace intérieur de 10 pixels autour des liens de navigation */
-    padding: 10px;
-    /* Transition de 0.3 seconde sur tous les effets */
-    transition: all 0.3s ease;
-  }
-  
-  nav a:hover {
-    /* Fond noir pour les liens de navigation lorsqu'ils sont survolés */
-    background-color: #333;
-    /* Texte blanc pour les liens de navigation lorsqu'ils sont survolés */
-    color: #fff;
-  }
-  
-
-  /* Style pour la section entière du slider */
-.slider {
-  position: relative; /* Positionnement relatif */
-  height: 50vh; /* Hauteur égale à la moitié de la vue en hauteur (viewport height) */
-  overflow: hidden; /* Masquer le contenu qui dépasse de la section */
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
 }
 
-/* Style pour le conteneur des images du slider */
-.slider-container {
-  position: relative; /* Positionnement relatif */
-  height: 100%; /* Hauteur égale à 100% de la hauteur de la section parent */
-  width: 300%; /* Largeur égale à 300% de la largeur du conteneur parent */
-  display: flex; /* Afficher les éléments en tant que flexbox */
-  transition: left 0.5s ease-in-out; /* Transition pour l'animation de défilement */
-  left: 0; /* Position de départ pour le défilement */
+
+/* Styles pour l'en-tête de la page */
+header {
+  /* Utilisation d'un modèle de boîte flexible pour l'en-tête */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Fond blanc */
+  background-color: #fff;
+  /* Texte noir */
+  color: #333;
+  /* Espace intérieur de 20 pixels autour de l'en-tête */
+  padding: 30px;
+  /* Ajout d'une marge inférieure pour créer de l'espace entre le menu et le carrousel */
+  margin-bottom: 30px; /* Vous pouvez ajuster cette valeur pour obtenir l'espace souhaité */
 }
 
-/* Style pour chaque image dans le slider */
-.slider-item {
-  position: relative; /* Positionnement relatif */
-  width: 33.33%; /* Largeur égale à 33,33% de la largeur du conteneur parent */
-  height: 100%; /* Hauteur égale à 100% de la hauteur de la section parent */
+/* Styles pour les icônes des réseaux sociaux */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Alignement vertical des icônes */
+  margin-top: 8px; /* Marge supérieure pour décaler légèrement les icônes vers le bas */
 }
 
-/* Style pour l'image active */
-.slider-item.active {
-  transform: scale(1); /* Agrandir l'image active */
-  z-index: 2; /* Empiler l'image active au-dessus des autres images */
+.social-icons a {
+  width: 30px; /* Largeur des icônes */
+  height: 30px; /* Hauteur des icônes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Style pour les images non actives */
-.slider-item:not(.active) {
-  transform: scale(0.8); /* Réduire la taille des images non actives */
-  opacity: 0.5; /* Réduire l'opacité des images non actives */
-  z-index: 1; /* Empiler les images non actives en-dessous de l'image active */
+.social-icons img {
+  max-width: 100%; /* Largeur maximale des images des icônes */
+  max-height: 100%; /* Hauteur maximale des images des icônes */
 }
 
-/* Style pour les images dans le slider */
-.slider-item img {
-  width: 100%; /* Largeur de l'image à 100% de la largeur de son conteneur */
-  height: 100%; /* Hauteur de l'image à 100% de la hauteur de son conteneur */
-  object-fit: cover; /* Redimensionnement de l'image pour couvrir tout le conteneur */
+
+/* Styles pour la barre de navigation */
+nav {
+  /* Flottement à droite de la barre de navigation */
+  float: right;
+  /* Marge de 10 pixels en haut de la barre de navigation */
+  margin-top: 10px;
 }
 
-/* Style pour la légende de l'image */
-.slider-caption {
-  position: absolute; /* Positionnement absolu */
-  bottom: 20px; /* Distance de 20px depuis le bas */
-  left: 20px; /* Distance de 20px depuis la gauche */
+nav ul {
+  /* Suppression des puces et des marges de la liste des liens de navigation */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  /* Affichage en ligne des liens de navigation */
+  display: inline-block;
+  /* Marge de 0 pixels sur les côtés des liens */
+  margin: 0 20px;
+}
+
+nav a {
+  /* Couleur de texte noire pour les liens de navigation */
+  color: #333;
+  /* Texte sans décoration */
+  text-decoration: none;
+  /* Taille de police de 18 pixels et graisse de police en gras */
+  font-size: 20px;
+  font-weight: bold;
+  /* Espace intérieur de 10 pixels autour des liens de navigation */
+  padding: 10px;
+  /* Transition de 0.3 seconde sur tous les effets */
+  transition: all 0.3s ease;
+
+  /* Ajout des styles pour l'effet de survol moderne */
+  position: relative;
+}
+
+nav a::after {
+  /* Crée un pseudo-élément pour l'effet de soulignement animé */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  /* Change la couleur du texte en noir lors de l'effet de survol */
+  color: #333;
+}
+
+nav a:hover::after {
+  /* Active l'effet de soulignement animé lors de l'effet de survol */
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+ 
+
+
+/* Style pour le conteneur principal du carrousel */
+.carrousel {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* 50% de la hauteur de la fenêtre de visualisation */
+  overflow: hidden; /* Cache tout ce qui dépasse du conteneur */
+  margin-bottom: 2rem; /* Ajoute une marge inférieure de 2rem (32 pixels) */
+}
+
+/* Style pour le conteneur interne du carrousel */
+.carrousel-inner {
+  display: flex; /* Utilise Flexbox pour aligner les diapositives horizontalement */
+  width: 300%; /* Largeur totale pour 3 diapositives (100% par diapositive) */
+  height: 100%;
+  animation: carrousel-animation 12s infinite; /* Applique une animation infinie avec une durée de 12 secondes */
+}
+
+/* Style pour chaque diapositive du carrousel */
+.carrousel-item {
+  flex-shrink: 0; /* Empêche le rétrécissement des diapositives */
+  /* Chaque diapositive occupe 1/3 de la largeur totale */
+  width: 33.3333%;
+  height: 100%;
+  position: relative;
+}
+
+/* Style pour les images du carrousel */
+.carrousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+/* Animation pour faire défiler les diapositives */
+@keyframes carrousel-animation {
+  0%, 33.3333% {
+    transform: translateX(0%);
+  }
+  33.3334%, 66.6666% {
+    transform: translateX(-33.3333%);
+  }
+  66.6667%, 100% {
+    transform: translateX(-66.6666%);
+  }
+}
+
+
+ /* l'espace blanc la force des images */
+
+ .content-section {
+  text-align: left;
+  font-size: 60px;
+  padding: 40px 0; /* Ajoute un espace en haut et en bas de la section */
+  max-width: 800px; /* Définir la largeur maximale pour la section */
+  margin: 0 auto; /* Centre la section horizontalement */
+  margin-bottom: 20px; /* Espace sous le titre */
+
+}
+
+
+.cta-button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px; /* Arrondit les coins du bouton */
+  transition: all 0.3s ease;
+  margin-bottom: 30px; /* Espace sous le titre */
+
+}
+
+.cta-button:hover {
+  background-color: #555; /* Change la couleur du bouton lors du survol */
+}
+
+
+
+/* Style pour la section avec la vidéo en arrière-plan */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+/* Style pour la vidéo */
+.video-section video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit: cover;
+}
+
+.overlay-button {
+  display: inline-block;
+  background-color: rgba(156, 140, 140, 0); /* Couleur de fond plus claire avec transparence */
+  color: #fff;
+  font-size: 40px; /* Police plus grande */
+  font-weight: bold;
+  padding: 20px 40px; /* Plus grand padding */
+  text-decoration: none;
+  border-radius: 50px; /* Arrondit les coins du bouton */
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%; /* Centrer le bouton verticalement */
+  left: 25%; /* Centrer le bouton horizontalement */
+  transform: translate(-50%, -50%); /* Ajuster la position pour centrer le bouton */
+}
+
+.overlay-button:hover {
+  background-color: rgba(132, 129, 129, 0.8); /* Change la couleur du bouton lors du survol */
+}
+
+
+
+/* Style de la section presentation labo */
+
+.feature-section {
+  padding: 100px 0; /* Ajoute un espace en haut et en bas de la section */
+  display: flex; /* Utilise Flexbox pour la mise en page */
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+}
+
+/* Style du conteneur flexbox */
+.container {
+  display: flex; /* Utilise Flexbox pour la mise en page */
+}
+
+/* Style du conteneur de l'image */
+.feature-image {
+  flex: 2; /* Prend 50% de la largeur totale */
+  max-width: 100%; /* Largeur maximale de l'image */
+  padding-right: 5px; /* Ajoute un espace à droite de l'image */
+  padding-left: 100px;
+  
+}
+
+/* Style de l'image */
+.feature-image img {
+  max-width: 80%; /* Largeur maximale de l'image */
+  height: auto; /* Hauteur ajustée automatiquement */
+  border-bottom-left-radius: 50px;
+
+}
+
+/* Style du conteneur de texte */
+.feature-text {
+  flex: 2; /* Prend 50% de la largeur totale */
+  background-color: rgb(155, 178, 150); /* Couleur de fond vert pastel clair */
+  padding: 40px; /* Espace intérieur autour du texte et du bouton */
+  border-top-left-radius: 50px;
+
+}
+
+/* Style du titre */
+.feature-text h2 {
+  font-size: 35px; /* Taille de la police du titre */
+  margin-bottom: 40px; /* Espace sous le titre */
+}
+
+/* Style du texte descriptif */
+.feature-text p {
+  font-size: 28px; /* Taille de la police du texte */
+  margin-bottom: 70px; /* Espace sous le texte */
+}
+
+/* fin du Style de la section presentation labo */
+
+/* Section pleine page photo presentation des services */
+.full-width-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rounded-image {
+  display: block;
+  width: 100%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.overlay-text {
+  position: relative;
+}
+
+.overlay-text h2 {
+  position: absolute;
+  top: 40%; /* Positionne le texte verticalement au centre de l'image */
+  left: 50%; /* Positionne le texte horizontalement au centre de l'image */
+  transform: translate(-50%, -50%); /* Centrage précis du texte */
   color: #fff; /* Couleur du texte en blanc */
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre portée sur le texte */
+  font-size: 55px; /* Taille du texte */
+  text-align: center; /* Centrer le texte */
 }
 
-/* Style pour le titre de la légende */
-.slider-caption h2 {
-  font-size: 2em; /* Taille de police de 2em */
-  margin: 0; /* Marge supprimée */
-  padding: 0; /* Rembourrage supprimé */
+.services-button {
+  position: absolute;
+  top: 77%; /* Centrer le bouton verticalement */
+  left: 50%; /* Centrer le bouton horizontalement */
+  transform: translate(-50%, -50%); /* Ajuster la position pour centrer le bouton */
+  width: 200px; /* Largeur du bouton */
+  height: 50px; /* Hauteur du bouton */
+  font-size: 22px; /* Taille du texte dans le bouton */
+  line-height: 50px; /* Centrer le texte verticalement dans le bouton */
+  text-align: center; /* Centrer le texte horizontalement dans le bouton */
+  /* Vous pouvez également ajouter des styles pour rendre le bouton plus attrayant */
+  background-color: #f4f1ea; /* Couleur de fond du bouton */
+  color: #363434; /* Couleur du texte */
+  border: none; /* Enlever la bordure */
+  border-radius: 25px; /* Arrondir les coins du bouton */
+  cursor: pointer; /* Changer le curseur en main lorsque la souris passe sur le bouton */
+  text-decoration: none; /* Enlever le soulignement du texte */
 }
 
-/* Style pour la description de la légende */
-.slider-caption p {
-  font-size: 1.2em; /* Taille de police de 1,2em */
-  margin: 0; /* Marge supprimée */
-  padding: 0; /* Rembourrage supprimé */
+
+/* Container pour chaque photographe */
+.photographer {
+  display: flex; /* Utilisation de Flexbox pour la disposition */
+  width: 100%; /* Largeur totale de l'écran */
+  padding: 3rem 0; /* Espacement vertical entre les photographes */
 }
 
-/* Style pour la navigation du slider
+/* Inverser le deuxième photographe : image à droite, texte à gauche */
+.photographer:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+/* Image du photographe */
+.photographer img {
+  width: 30%; /* Réduction de la taille de l'image à 30% */
+  object-fit: cover; /* Ajustement de l'image pour qu'elle remplisse sa zone */
+  border-radius: 25px; /* Arrondissement des angles de l'image */
+}
+
+/* Conteneur pour les informations du photographe */
+.photographer-info {
+  width: 50%; /* Largeur du conteneur des informations */
+  padding: 0 5%; /* Espacement des informations par rapport à l'image et au bord droit de l'écran */
+}
+
+/* Augmentation de la taille de police pour le nom et la description */
+.photographer h2 {
+  font-size: 1.5rem; /* Augmentation de la taille de police pour le nom */
+}
+
+.photographer p {
+  font-size: 1.2rem; /* Augmentation de la taille de police pour la description */
+}
+
+/* Arrière-plan alternatif pour le deuxième photographe */
+.photographer:nth-child(2) {
+  background-color: #f4f1ea; /* Couleur d'arrière-plan marron clair */
+}
+
+/* Espacement des images par rapport au bord de l'écran */
+.photographer:nth-child(1) img, .photographer:nth-child(3) img {
+  margin-left: 5%; /* Espacement de l'image par rapport au bord gauche de l'écran */
+}
+
+.photographer:nth-child(2) img {
+  margin-right: 5%; /* Espacement de l'image de Paul par rapport au bord droit de l'écran */
+}
+
+/* Mise en forme générale de la page service.html */
+
+/* Styles pour la section banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 95vh; /* Hauteur de la fenêtre */
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 60px;
+
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95; /* Ajustez l'opacité pour rendre le texte plus lisible */
+}
+
+.banner-text {
+  position: absolute;
+  top: 52%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  color: #f8f3f3; /* Couleur du texte */
+  font-size: 3rem; /* Taille du texte */
+  font-weight: 5;
+  line-height: 2;
+
+}
+
+/* Styles pour les médias mobiles */
+@media (max-width: 768px) {
+  .banner-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+
+body.services-page {
+  background-color: #f4f1ea;
+}
+
+/* Styles pour la phrase : en associatiant savoir et faire.... */
+
+.introduction {
+  background-color: white;
+  padding: 5rem 10rem; /* Modifiez les valeurs pour ajuster l'espace entre le texte et les bords de l'écran */
+  text-align: left; /* Justifie le texte à gauche */
+  font-size: 3rem;
+  margin: 0 auto; /* Centre le bloc .introduction */
+  max-width: 1200px; /* Définir la largeur maximale du bloc .introduction */
+  margin-bottom: 50px;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.left-column {
+  width: 40%;
+  text-align: left;
+  padding-right: 80px; /* ajoutez un espace entre les colonnes */
+}
+
+.left-title {
+  font-size: 40px; /* ajustez la taille de la police pour le titre de gauche */
+  font-weight: bold;
+  margin-bottom: 20px; /* ajustez l'espace entre le titre et la phrase */
+  font-family: HammerBroIsTwinsane-Regular;
+}
+
+.left-phrase {
+  font-size: 20px; /* ajustez la taille de la police pour la phrase de gauche */
+  font-weight: bolder;
+}
+
+.right-column {
+  width: 60%;
+  text-align: left;
+  margin-top: 0px; 
+}
+
+.right-text {
+  font-size: 22px; /* ajustez la taille de la police pour le texte de droite */
+}
+
+.separator {
+  width: 80%; /* ajustez la longueur du trait */
+  border: 1px solid #a8a5a5; /* ajustez l'épaisseur et la couleur du trait */
+  margin-top: 70px; /* ajustez l'espace entre les colonnes et le trait */
+  margin-bottom: 70px; /* ajustez l'espace entre le trait et les colonnes suivantes */
+}
+
+
+/* partie ateliers */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur principal */
+.services-container {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+/* Titre de la page */
+h1 {
+  font-size: 2.5rem;
+  margin-left: 5%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  float: left;
+}
+
+/* Boutons flèches */
+.buttons {
+  float: right;
+  margin-top: 2rem;
+  margin-right: 5%;
+}
+
+.arrow-left,
+.arrow-right {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Conteneur des ateliers */
+.workshops {
+  clear: both;
+  display: flex;
+  overflow-x: auto;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+/* Atelier individuel */
+.workshop {
+  min-width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre de l'atelier */
+.workshop h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Description de l'atelier */
+.workshop p {
+  font-size: 1rem;
+}
+
+
+
+/* la page about.html */
+
+.about-page .about-banner {
+  background-image: url('photos/about-2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 50px;
+
+}
+
+.about-page .about-banner .about-text {
+  text-align: left;
+  border-left: 0cap;
+}
+
+.about-page .about-banner .about-text h1 {
+  font-size: 10rem;
+  text-shadow: #333;
+  color: rgb(224, 214, 214);
+  }
+
+/* Styles pour la section de présentation de la page about.html */
+.about-page .about-intro {
+  padding: 4rem 0;
+  background-color: #f4f1ea;
+}
+
+.about-page .about-intro-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 0 2rem;
+}
+
+.about-page .about-intro .lead {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-page .about-intro p {
+  margin-bottom: 3rem;
+}
+
+.about-page .about-intro blockquote {
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #333;
+}
+
+.about-page .about-intro footer {
+  font-size: 1rem;
+  text-align: right;
+}

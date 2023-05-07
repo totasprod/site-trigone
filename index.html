@@ -6,32 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decouvrir le Collectif Trigone</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-		<a href="index.html"><img src="photos/LOGO_CT_TRIGONE.png" alt="Logo du collectif Trigone" width="100" height="100"></a>
-		<nav>
-			<ul>
-				<li><a href="news.html">News</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="photographes.html">Photographes</a></li>
-				<li><a href="laboratoire.html">Laboratoire</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="residence.html">Residence</a></li>
-                <li><a href="festival.html">Festival</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300&display=swap">
 
-    <section id="slider">
-        <div class="slider-container">
-          <img src="photos/slider/zommfestival-slider.jpg">
-          <img src="photos/slider/Immersio-slider.jpg">
-          
+</head>
+<body class="index-page">
+        <!-- En-tête du site avec le logo et la barre de navigation -->
+    <header>
+        <!-- Logo du site -->
+        <a href="index.html"><img src="photos/LOGO_CT_TRIGONE.png" alt="Logo du collectif Trigone" width="100" height="100"></a>
+       
+       <!-- Logos des réseaux sociaux -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100077680113567" target="_blank">
+            <img src="photos/logos/FB.png" alt="Facebook" width="30" height="30">
+        </a>
+        <a href="https://www.instagram.com/collectif_trigone/" target="_blank">
+            <img src="photos/logos/instagram.jpg" alt="Instagram" width="30" height="30">
+        </a>
+    </div>
+       
+        <!-- Barre de navigation -->
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="photographes.html">Photographes</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="laboratoire.html">Laboratoire</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="residence.html">Residence</a></li>
+                <li><a href="festival.html">Festival</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrousel d'images -->
+    <div class="carrousel">
+        <div class="carrousel-inner">
+            <!-- Diapositive 1 -->
+            <div class="carrousel-item">
+                <img src="photos/slider/tao-expo.jpg" alt="Image 1">
+                <div class="carrousel-caption">
+                    
+                </div>
+            </div>
+            <!-- Diapositive 2 -->
+            <div class="carrousel-item">
+                <img src="photos/slider/zommfestival-slider.jpg" alt="Image 2">
+                <div class="carrousel-caption">
+                    
+                </div>
+            </div>
+            <!-- Diapositive 3 -->
+            <div class="carrousel-item">
+                <img src="photos/slider/expo-la-comete.jpg" alt="Image 3">
+                <div class="carrousel-caption">
+                    
+                </div>
+            </div>
         </div>
+    </div>
+
+    <section class="content-section">
+        <p>La force des images <br> pour semer <br> l'espoir et l'inspiration</p>
+        <a href="about.html" class="cta-button">L'esprit du collectif</a>
       </section>
       
-    
-</body>
-</html>
+
+    <!-- Section avec vidéo en arrière-plan -->
+<section class="video-section">
+    <!-- Vidéo en arrière-plan -->
+    <video autoplay muted loop>
+      <source src="photos/videos/video-fond-site-trigone-presentation-collectif.webm" type="video/webm">
+      Votre navigateur ne prend pas en charge les vidéos HTML5.
+    </video>
+    <a href="photographes.html" class="overlay-button">
+        <span>Explorer, documenter et partager<br>Rencontrez l'équipe !</span>
+      </a>
+      
+    <!-- Contenu supplémentaire pour la section vidéo (titres, texte, etc.) -->
+    <!-- Ajoutez ici votre contenu -->
+</section>
+
+
+<!-- Début de la section presentation labo -->
+<section class="feature-section">
+    <!-- Conteneur pour la mise en page flexbox -->
+    <div class="container">
+      <!-- Conteneur pour l'image -->
+      <div class="feature-image">
+        <!-- Image à gauche -->
+        <img src="photos/caravane-postcard.jpg" alt="Description de l'image">
+      </div>
+      <!-- Conteneur pour le texte et le bouton -->
+      <div class="feature-text">
+        <!-- Titre -->
+        <h2>Un labo argentique dans vos structures.</h2>
+        <!-- Texte descriptif -->
+        <p>Le laboratoire argentique mobile est une caravane entièrement équipée et autonome, permettant de se déplacer sur le territoire et d'apporter un enseignement photographique dans des lieux n'ayant pas le matériel ou la structure nécessaire.</p>
+        <!-- Bouton -->
+        <a href="laboratoire.html" class="cta-button">La caravane TRIGONE</a>
+      </div>
+    </div>
+  </section>
+  <!-- Fin de la section presentation labo -->
+
+   <!-- Section pleine page photo pour presenter nos services -->
+
+  
+  
+   <div class="overlay-text">
+      <img class="full-width-image rounded-image" src="photos/caravane-agrand.jpg" alt="Votre image">
+      <h2>Redécouvrez la magie de l'argentique <br> Des ateliers uniques pour explorer la photographie à ses origines</h2>
+      <a href="services.html" class="cta-button services-button">Commencez ici</a>
+  </div>
+  
+ 
